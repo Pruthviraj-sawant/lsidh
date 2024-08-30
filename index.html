@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container w-[100vw] h-[100vh] flex flex-col items-center justify-center bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ...">
+        <h1 class="font-bold text-[35px] mb-8 font-mullish text-sky-950 ">PASSWORD GENERATOR</h1>
+        <span data-copyMsg class="ml-60 mb-4 h-9 w-16 "></span>
+        <div class=" h-[3rem] w-[19rem] bg-lightBlue500 border-solid border-2 border-slate-800  rounded-md flex">
+            <input readonly  class="display h-[2rem] w-[15rem] bg-lightBlue500 mt-2" data-passwordDisplay>
+            
+            <button data-copy class="ml-4 mt-2 h-[2rem] w-[30px]">
+           
+            <i class="fa-solid fa-copy text-[25px]  text-teal-950 "></i>  
+        </button>
+        </div>
+
+
+    <div class="main bg-lightBlue500 border-solid border-2 border-slate-800  mt-5 p-5  rounded-md">
+        <div class="flex  text-[20px] space-x-20 pt-3 pb-9 ">
+        <h2 class="font-bold font-mullish">password length</h2>
+        <div class="font-bold font-mullish" data-lengthNumber>
+            10
+        </div>
+        </div>
+        <input type="range" min="1" max="20" class="slider w-64" step="1" data-lengthSlider>
+        <form class="flex flex-col pb-4  font-mullish">
+            <div class="flex items-center gap-5 ">
+                <input type="checkbox" name="upper" id="uppercase">
+                <label for="upper">Include uppercase letters</label>
+            </div>
+            <div class="flex items-center gap-5 ">
+                <input type="checkbox" name="lower" id="lowercase">
+                <label for="lower">include lowercase latters </label>
+            </div>
+            <div class="flex items-center gap-5 ">
+                <input type="checkbox" name="num" id="numbers">
+                <label for="num">include number </label>
+            </div>
+            <div class="flex items-center gap-5 ">
+                <input type="checkbox" name="sym" id="symbols">
+                <label for="sym">Include symbols</label>
+            </div>
+    
+        </form>
+
+        <div class="flex flex-row space-x-40 mb-5">
+            <h2 class="font-bold text-[18px] font-mullish">strength</h2>
+            <div class="bg-yellow-500 rounded-xl h-5 w-5 mt-1" data-indicator>
+                
+            </div>
+        </div>
+
+        <div class=" font-mullish font-bold bg-yellow-500 flex justify-center items-center h-9 rounded-md text-white generateButton">
+           Generate Password
+        </div>
+    </div>
+</div>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
